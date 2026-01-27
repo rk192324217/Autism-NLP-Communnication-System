@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Autism Communication Support System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-wrapper">
+    <div class="auth-card">
+        <h1 class="auth-title">Autism Communication Support</h1>
+        <p class="auth-subtitle">
+            A real time NLP based system to support patient caregiver conversations
+        </p>
+
+        {% if error %}
+        <div class="error-box">{{ error }}</div>
+        {% endif %}
+
+        <form method="post" class="auth-form">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <select name="role" required>
+                <option value="">Select Role</option>
+                <option value="caregiver">Caregiver</option>
+                <option value="patient">Patient</option>
+            </select>
+
+            <div class="auth-actions">
+                <button type="submit" name="action" value="login">Login</button>
+                <button type="submit" name="action" value="register" class="secondary">
+                    Create Account
+                </button>
+            </div>
+        </form>
+
+        <p class="auth-footer">
+            Designed for clarity, empathy, and clinical support
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

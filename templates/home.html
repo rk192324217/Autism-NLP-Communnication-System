@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Conversation Monitoring Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="brand">
+        Autism Communication Support System
+    </div>
+    <a href="/logout" class="logout-btn">Logout</a>
+</header>
+
+<main class="dashboard-container">
+
+    <!-- LEFT PANEL -->
+    <section class="conversation-panel">
+        <h2>Live Conversation Session</h2>
+        <p class="panel-desc">
+            The caregiver asks a question. The patient responds. The system evaluates
+            contextual understanding and conversational continuity.
+        </p>
+
+        <label class="input-label">Caregiver Question</label>
+        <textarea id="caregiverText"
+                  placeholder="Example: How are you feeling today?">
+        </textarea>
+
+        <label class="input-label">Patient Response</label>
+        <textarea id="patientText"
+                  placeholder="Patient response appears here">
+        </textarea>
+
+        <button class="analyze-btn" onclick="submitConversation()">
+            Analyze Interaction
+        </button>
+
+        <div class="conversation-note">
+            Responses are analyzed using interpretable language models
+        </div>
+    </section>
+
+    <!-- RIGHT PANEL -->
+    <aside class="metrics-panel">
+        <h2>Evaluation Summary</h2>
+
+        <div class="metric-box">
+            <span class="metric-label">Context Retention</span>
+            <span class="metric-value" id="contextScore">-</span>
+        </div>
+
+        <div class="metric-box">
+            <span class="metric-label">Response Time</span>
+            <span class="metric-value" id="responseTime">-</span>
+        </div>
+
+        <div class="metric-box">
+            <span class="metric-label">Unsmoothed Model Score</span>
+            <span class="metric-value" id="unsmoothedScore">-</span>
+        </div>
+
+        <div class="metric-box">
+            <span class="metric-label">Smoothed Model Score</span>
+            <span class="metric-value" id="smoothedScore">-</span>
+        </div>
+
+        <div class="explanation-box">
+            <h3>System Interpretation</h3>
+            <p id="explanationText">
+                Awaiting interaction for evaluation
+            </p>
+        </div>
+    </aside>
+
+</main>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>

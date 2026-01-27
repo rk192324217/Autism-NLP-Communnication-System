@@ -1,0 +1,35 @@
+[
+    {
+        "timestamp": "2026-01-27T09:51:25.386108",
+        "caregiver": "How are you feeling today\n",
+        "patient": "I am feeling tired and a little sad today\n\n",
+        "metrics": {
+            "unsmoothed_log_probability": 0.0,
+            "smoothed_log_probability": -12.8755,
+            "context_retention": 0.0,
+            "response_time": 0.0486
+        }
+    },
+    {
+        "timestamp": "2026-01-27T10:14:45.724950",
+        "caregiver": "        ukshdfuasdfasdda",
+        "patient": "        gasdgasdgasdg",
+        "metrics": {
+            "unsmoothed_log_probability": 0.0,
+            "smoothed_log_probability": 0.0,
+            "context_retention": 0.0,
+            "response_time": 0.0185
+        }
+    },
+    {
+        "timestamp": "2026-01-27T10:24:28.443631",
+        "caregiver": "Hi How are You",
+        "patient": "I am fine tired from school",
+        "metrics": {
+            "unsmoothed_log_probability": 0.0,
+            "smoothed_log_probability": -6.2638,
+            "context_retention": 0.3,
+            "response_time": 0.0
+        }
+    }
+]
