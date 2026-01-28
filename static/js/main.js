@@ -1,30 +1,60 @@
+let chart;
+
 function submitConversation() {
-    const caregiver = document.getElementById("caregiverText").value;
-    const patient = document.getElementById("patientText").value;
+    const caregiver = document.getElementById("caregiverText").value.trim();
+    const patient = document.getElementById("patientText").value.trim();
+
+    if (!caregiver || !patient) {
+        alert("Please fill both fields");
+        return;
+    }
 
     fetch("/process", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            caregiver: caregiver,
-            patient: patient
-        })
-    })
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("contextScore").innerText =
-            data.metrics.context_retention;
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "same-origin",
+    body: JSON.stringify({ caregiver, patient })
+})
 
-        document.getElementById("responseTime").innerText =
-            data.metrics.response_time + " s";
 
-        document.getElementById("unsmoothedScore").innerText =
-            data.metrics.unsmoothed_log_probability;
+}
 
-        document.getElementById("smoothedScore").innerText =
-            data.metrics.smoothed_log_probability;
+function updateUI(metrics, explanation) {
+    document.getElementById("uScore").innerText = metrics.unsmoothed_log_probability;
+    document.getElementById("sScore").innerText = metrics.smoothed_log_probability;
+    document.getElementById("uContext").innerText = metrics.context_retention;
+    document.getElementById("sContext").innerText = metrics.context_retention;
+    document.getElementById("uTime").innerText = metrics.response_time;
+    document.getElementById("sTime").innerText = metrics.response_time;
 
-        document.getElementById("explanationText").innerText =
-            data.explanation;
+    document.getElementById("explanation").innerText = explanation;
+
+    drawChart(metrics);
+}
+
+function drawChart(metrics) {
+    const ctx = document.getElementById("chart").getContext("2d");
+
+    if (chart) chart.destroy();
+
+    chart = new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: ["Unsmoothed", "Smoothed"],
+            datasets: [{
+                label: "Log Probability",
+                data: [
+                    metrics.unsmoothed_log_probability,
+                    metrics.smoothed_log_probability
+                ],
+                backgroundColor: ["#dc3545", "#3e7cb1"]
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: false }
+            }
+        }
     });
 }

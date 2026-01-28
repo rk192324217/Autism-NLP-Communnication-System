@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Conversation Monitoring Dashboard</title>
+    <meta charset="UTF-8">
+    <title>Autism Communication Support System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main Styles -->
     <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
+<!-- ================= TOP BAR ================= -->
 <header class="top-bar">
     <div class="brand">
         Autism Communication Support System
@@ -14,69 +21,84 @@
     <a href="/logout" class="logout-btn">Logout</a>
 </header>
 
-<main class="dashboard-container">
+<!-- ================= DASHBOARD ================= -->
+<main class="dashboard">
 
-    <!-- LEFT PANEL -->
-    <section class="conversation-panel">
-        <h2>Live Conversation Session</h2>
-        <p class="panel-desc">
-            The caregiver asks a question. The patient responds. The system evaluates
-            contextual understanding and conversational continuity.
+    <!-- ================= CONVERSATION PANEL ================= -->
+    <section class="card">
+        <h2>Live Caregiver–Patient Conversation</h2>
+        <p class="muted">
+            The caregiver initiates the conversation and the patient responds.
+            The system evaluates contextual understanding using classical NLP models.
         </p>
 
-        <label class="input-label">Caregiver Question</label>
-        <textarea id="caregiverText"
-                  placeholder="Example: How are you feeling today?">
-        </textarea>
+        <label for="caregiverText">Caregiver Question</label>
+        <textarea
+            id="caregiverText"
+            placeholder="Example: How are you feeling today?"
+            aria-label="Caregiver question"
+        ></textarea>
 
-        <label class="input-label">Patient Response</label>
-        <textarea id="patientText"
-                  placeholder="Patient response appears here">
-        </textarea>
+        <label for="patientText">Patient Response</label>
+        <textarea
+            id="patientText"
+            placeholder="Example: I am feeling tired"
+            aria-label="Patient response"
+        ></textarea>
 
-        <button class="analyze-btn" onclick="submitConversation()">
+        <button class="primary-btn" onclick="submitConversation()">
             Analyze Interaction
         </button>
+    </section>
 
-        <div class="conversation-note">
-            Responses are analyzed using interpretable language models
+    <!-- ================= EVALUATION PANEL ================= -->
+    <section class="card">
+        <h2>Model Evaluation Summary</h2>
+
+        <!-- Evaluation Table -->
+        <table class="eval-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Unsmoothed N-Gram</th>
+                    <th>Smoothed N-Gram</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Log Probability</td>
+                    <td id="uScore">-</td>
+                    <td id="sScore">-</td>
+                </tr>
+                <tr>
+                    <td>Context Retention</td>
+                    <td id="uContext">-</td>
+                    <td id="sContext">-</td>
+                </tr>
+                <tr>
+                    <td>Response Time (seconds)</td>
+                    <td id="uTime">-</td>
+                    <td id="sTime">-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Chart -->
+        <canvas id="chart" height="220"></canvas>
+
+        <!-- Interpretation -->
+        <div class="interpretation">
+            <strong>System Recommendation</strong>
+            <p id="explanation">
+                Awaiting interaction for evaluation.
+            </p>
         </div>
     </section>
 
-    <!-- RIGHT PANEL -->
-    <aside class="metrics-panel">
-        <h2>Evaluation Summary</h2>
-
-        <div class="metric-box">
-            <span class="metric-label">Context Retention</span>
-            <span class="metric-value" id="contextScore">-</span>
-        </div>
-
-        <div class="metric-box">
-            <span class="metric-label">Response Time</span>
-            <span class="metric-value" id="responseTime">-</span>
-        </div>
-
-        <div class="metric-box">
-            <span class="metric-label">Unsmoothed Model Score</span>
-            <span class="metric-value" id="unsmoothedScore">-</span>
-        </div>
-
-        <div class="metric-box">
-            <span class="metric-label">Smoothed Model Score</span>
-            <span class="metric-value" id="smoothedScore">-</span>
-        </div>
-
-        <div class="explanation-box">
-            <h3>System Interpretation</h3>
-            <p id="explanationText">
-                Awaiting interaction for evaluation
-            </p>
-        </div>
-    </aside>
-
 </main>
 
+<!-- ================= SCRIPTS ================= -->
 <script src="/static/js/main.js"></script>
+
 </body>
 </html>

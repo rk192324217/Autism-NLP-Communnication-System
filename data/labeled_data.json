@@ -1,0 +1,52 @@
+[
+  {
+    "caregiver": "How are you feeling today?",
+    "patient": "I feel tired",
+    "label": 1
+  },
+  {
+    "caregiver": "Did you sleep well last night?",
+    "patient": "No noise was loud",
+    "label": 1
+  },
+  {
+    "caregiver": "What made the noise?",
+    "patient": "People talking",
+    "label": 1
+  },
+  {
+    "caregiver": "Do you want to eat breakfast now?",
+    "patient": "No",
+    "label": 0
+  },
+  {
+    "caregiver": "Why do you not want breakfast?",
+    "patient": "Not hungry",
+    "label": 0
+  },
+  {
+    "caregiver": "Are you feeling upset?",
+    "patient": "Little bit",
+    "label": 1
+  },
+  {
+    "caregiver": "Do you want to rest before school?",
+    "patient": "Yes rest first",
+    "label": 1
+  },
+  {
+    "caregiver": "Do you like loud places?",
+    "patient": "No too loud",
+    "label": 1
+  },
+  {
+    "caregiver": "What do you want to do now?",
+    "patient": "Play game",
+    "label": 1
+  },
+  {
+    "caregiver": "Can you explain why you are upset?",
+    "patient": "",
+    "label": 0
+  }
+]

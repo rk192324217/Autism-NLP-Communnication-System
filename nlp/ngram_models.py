@@ -1,49 +1,56 @@
-from collections import Counter
 import math
+from collections import defaultdict
+
 
 class NGramModel:
-    def __init__(self, n=2, smoothing=None, k=1):
+    def __init__(self, n=2, smoothing=None):
         self.n = n
         self.smoothing = smoothing
-        self.k = k
-        self.ngram_counts = Counter()
-        self.context_counts = Counter()
+        self.ngram_counts = defaultdict(int)
+        self.context_counts = defaultdict(int)
         self.vocab = set()
 
     def train(self, tokens):
+        if len(tokens) < self.n:
+            return
+
         for i in range(len(tokens) - self.n + 1):
-            ngram = tuple(tokens[i:i+self.n])
-            context = tuple(tokens[i:i+self.n-1])
+            context = tuple(tokens[i:i + self.n - 1])
+            target = tokens[i + self.n - 1]
 
-            self.ngram_counts[ngram] += 1
+            self.ngram_counts[(context, target)] += 1
             self.context_counts[context] += 1
-            self.vocab.update(ngram)
+            self.vocab.add(target)
 
-    def probability(self, ngram):
-        context = ngram[:-1]
-
+    def probability(self, context, word):
         if self.smoothing == "laplace":
             return (
-                self.ngram_counts[ngram] + self.k
+                self.ngram_counts[(context, word)] + 1
             ) / (
-                self.context_counts[context] + self.k * len(self.vocab)
+                self.context_counts[context] + len(self.vocab)
             )
 
-        # Unsmoothened
+        # Unsmoothed
         if self.context_counts[context] == 0:
-            return 0.0
+            return 0
 
-        return self.ngram_counts[ngram] / self.context_counts[context]
+        return self.ngram_counts[(context, word)] / self.context_counts[context]
 
     def sentence_log_probability(self, tokens):
-        log_prob = 0.0
-        for i in range(len(tokens) - self.n + 1):
-            ngram = tuple(tokens[i:i+self.n])
-            prob = self.probability(ngram)
+        if len(tokens) < self.n:
+            return float("-inf")
 
-            if prob > 0:
-                log_prob += math.log(prob)
-            else:
-                log_prob += math.log(1e-10)
+        log_prob = 0.0
+
+        for i in range(len(tokens) - self.n + 1):
+            context = tuple(tokens[i:i + self.n - 1])
+            target = tokens[i + self.n - 1]
+
+            prob = self.probability(context, target)
+
+            if prob == 0:
+                return float("-inf")
+
+            log_prob += math.log(prob)
 
         return log_prob

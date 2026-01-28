@@ -1,35 +1,882 @@
 [
-    {
-        "timestamp": "2026-01-27T09:51:25.386108",
-        "caregiver": "How are you feeling today\n",
-        "patient": "I am feeling tired and a little sad today\n\n",
-        "metrics": {
-            "unsmoothed_log_probability": 0.0,
-            "smoothed_log_probability": -12.8755,
-            "context_retention": 0.0,
-            "response_time": 0.0486
-        }
-    },
-    {
-        "timestamp": "2026-01-27T10:14:45.724950",
-        "caregiver": "        ukshdfuasdfasdda",
-        "patient": "        gasdgasdgasdg",
-        "metrics": {
-            "unsmoothed_log_probability": 0.0,
-            "smoothed_log_probability": 0.0,
-            "context_retention": 0.0,
-            "response_time": 0.0185
-        }
-    },
-    {
-        "timestamp": "2026-01-27T10:24:28.443631",
-        "caregiver": "Hi How are You",
-        "patient": "I am fine tired from school",
-        "metrics": {
-            "unsmoothed_log_probability": 0.0,
-            "smoothed_log_probability": -6.2638,
-            "context_retention": 0.3,
-            "response_time": 0.0
-        }
+  {
+    "timestamp": "2026-01-27T09:51:25.386108",
+    "caregiver": "How are you feeling today\n",
+    "patient": "I am feeling tired and a little sad today\n\n",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -12.8755,
+      "context_retention": 0.0,
+      "response_time": 0.0486
     }
+  },
+  {
+    "timestamp": "2026-01-27T10:14:45.724950",
+    "caregiver": "        ukshdfuasdfasdda",
+    "patient": "        gasdgasdgasdg",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": 0.0,
+      "context_retention": 0.0,
+      "response_time": 0.0185
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:24:28.443631",
+    "caregiver": "Hi How are You",
+    "patient": "I am fine tired from school",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -6.2638,
+      "context_retention": 0.3,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:36:59.756327",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -12.8755,
+      "context_retention": 0.692,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:00.511136",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 0.692,
+      "response_time": 0.0042
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:02.632356",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 0.85,
+      "response_time": 0.0016
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:03.185235",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0034
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:03.626370",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:04.236027",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0031
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:04.410659",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:04.578765",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.001
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:04.765539",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0006
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:05.094893",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:05.259909",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0007
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:05.441011",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:05.591137",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:05.765875",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:05.927978",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.002
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:06.096319",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.002
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:06.273573",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.002
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:06.439982",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0028
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:42:06.606693",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired and a little sad today alos idjfhjsdhfj dsf difhisajdfjsdhflk jdshf kljsd lfkjsdlkfjlskdjfhlshf sadoxf",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -35.1556,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-27T10:44:26.960449",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired ",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.7489,
+      "context_retention": 0.235,
+      "response_time": 0.0032
+    }
+  },
+  {
+    "timestamp": "2026-01-28T09:11:59.681490",
+    "caregiver": "Hi ",
+    "patient": "Hay",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": 0.0,
+      "context_retention": 0.0,
+      "response_time": 0.1089
+    }
+  },
+  {
+    "timestamp": "2026-01-28T09:15:51.164776",
+    "caregiver": "Good morning. How are you feeling today?",
+    "patient": "I feel tired.",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -1.386294,
+      "context_retention": 0.0,
+      "response_time": 0.04365
+    }
+  },
+  {
+    "timestamp": "2026-01-28T09:36:08.820573",
+    "caregiver": "Hi",
+    "patient": "hi",
+    "metrics": {
+      "unsmoothed_score": -Infinity,
+      "smoothed_score": -Infinity,
+      "context_retention": 0.0,
+      "response_time": 0.0407
+    }
+  },
+  {
+    "timestamp": "2026-01-28T09:38:32.025009",
+    "caregiver": "Hi",
+    "patient": "Hi",
+    "metrics": {
+      "unsmoothed_score": -Infinity,
+      "smoothed_score": -Infinity,
+      "context_retention": 0.0,
+      "response_time": 0.0555
+    }
+  },
+  {
+    "timestamp": "2026-01-28T09:51:07.859298",
+    "caregiver": "hi",
+    "patient": "hi",
+    "metrics": {
+      "unsmoothed_score": -Infinity,
+      "smoothed_score": -Infinity,
+      "context_retention": 0.0,
+      "response_time": 0.0533
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:11:01.533059",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_score": 0.0,
+      "smoothed_score": -2.0794415416798357,
+      "context_retention": 0.0,
+      "response_time": 0.0426
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:11:23.967751",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_score": 0.0,
+      "smoothed_score": -2.0794415416798357,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:11:26.643630",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_score": 0.0,
+      "smoothed_score": -2.0794415416798357,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:11:27.202736",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_score": 0.0,
+      "smoothed_score": -1.6788473638062684,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:11:27.603403",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_score": 0.0,
+      "smoothed_score": -1.6788473638062684,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:11:28.014282",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_score": 0.0,
+      "smoothed_score": -1.6788473638062684,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:11:28.203737",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_score": 0.0,
+      "smoothed_score": -1.6788473638062684,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:11:28.338131",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_score": 0.0,
+      "smoothed_score": -1.6788473638062684,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:11:28.496974",
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_score": 0.0,
+      "smoothed_score": -1.6788473638062684,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:47:23.205514",
+    "caregiver": "oisdhfsd",
+    "patient": "sdfasdfsadf",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 0.0,
+      "response_time": 0.1111
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:47:25.152745",
+    "caregiver": "oisdhfsd",
+    "patient": "sdfasdfsadf",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:47:49.032727",
+    "caregiver": "How are you feeling today",
+    "patient": "Feeling Tired today",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -0.8109,
+      "context_retention": 0.0,
+      "response_time": 0.0011
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:48:06.882853",
+    "caregiver": "How are you feeling today",
+    "patient": "Feeling Tired today",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -0.8109,
+      "context_retention": 1.0,
+      "response_time": 0.002
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:31.693370",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 0.0,
+      "response_time": 0.0414
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:34.166852",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:36.564942",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:36.872322",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:37.052364",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:39.005104",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:43.477789",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:44.206330",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:48.761235",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:49.915730",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:50.148368",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:50.300414",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:50.473657",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:50.636858",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.001
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:50.804513",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:52:50.946977",
+    "caregiver": "Hi How are you feeling",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-28T10:58:53.705250",
+    "caregiver": "How are you feeling today",
+    "patient": "good",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 0.0,
+      "response_time": 0.0312
+    }
+  },
+  {
+    "timestamp": "2026-01-28T11:01:05.439851",
+    "caregiver": "hi",
+    "patient": "hi",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 0.0,
+      "response_time": 0.0595
+    }
+  },
+  {
+    "timestamp": 1769582095.8184369,
+    "caregiver": "i",
+    "patient": "ji",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 0.0,
+      "response_time": 0.0592
+    }
+  },
+  {
+    "timestamp": 1769582130.6153116,
+    "caregiver": "How are you doing today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 0.0,
+      "response_time": 0.001
+    }
+  },
+  {
+    "timestamp": 1769582197.4433393,
+    "caregiver": "How are you doing today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0066
+    }
+  },
+  {
+    "timestamp": 1769582198.2196407,
+    "caregiver": "How are you doing today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.002
+    }
+  },
+  {
+    "timestamp": 1769582198.4184878,
+    "caregiver": "How are you doing today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582198.597469,
+    "caregiver": "How are you doing today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0159
+    }
+  },
+  {
+    "timestamp": 1769582198.7809365,
+    "caregiver": "How are you doing today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582396.0856495,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582401.5465906,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582401.7175992,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582401.8660798,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582402.0026805,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0027
+    }
+  },
+  {
+    "timestamp": 1769582402.1481655,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582402.3096457,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582402.5518796,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582402.730613,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0036
+    }
+  },
+  {
+    "timestamp": 1769582403.3102899,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582403.490154,
+    "caregiver": "How are you feeling today",
+    "patient": "I am feeling tired",
+    "metrics": {
+      "unsmoothed_log_probability": 0.0,
+      "smoothed_log_probability": -2.0794,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582689.113187,
+    "caregiver": "Hi",
+    "patient": "Hello",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 0.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582690.7830753,
+    "caregiver": "Hi",
+    "patient": "Hello",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0
+    }
+  },
+  {
+    "timestamp": 1769582691.522751,
+    "caregiver": "Hi",
+    "patient": "Hello",
+    "metrics": {
+      "unsmoothed_log_probability": -Infinity,
+      "smoothed_log_probability": -Infinity,
+      "context_retention": 1.0,
+      "response_time": 0.0033
+    }
+  }
 ]
