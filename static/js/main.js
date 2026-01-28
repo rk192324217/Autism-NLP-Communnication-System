@@ -34,6 +34,17 @@ async function submitConversation() {
 
         // Update explanation
         document.getElementById("explanationText").textContent = data.explanation;
+        document.getElementById("downloadBtn").addEventListener("click", function () {
+            const canvas = document.getElementById("comparisonChart");
+
+            const image = canvas.toDataURL("image/png");
+
+            const link = document.createElement("a");
+            link.href = image;
+            link.download = "chart.png";
+
+            link.click();
+        });
 
         // Chart update
         const ctx = document.getElementById("comparisonChart").getContext("2d");
