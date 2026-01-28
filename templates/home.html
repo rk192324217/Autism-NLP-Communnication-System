@@ -2,66 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Autism Communication Support System</title>
+    <title>Autism Communication Support | Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Main Styles -->
     <link rel="stylesheet" href="/static/css/style.css">
-
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </head>
 <body>
 
-<!-- ================= TOP BAR ================= -->
-<header class="top-bar">
-    <div class="brand">
-        Autism Communication Support System
-    </div>
+<header class="top-bar glass">
+    <div class="brand">Autism Communication Support System</div>
     <a href="/logout" class="logout-btn">Logout</a>
 </header>
 
-<!-- ================= DASHBOARD ================= -->
-<main class="dashboard">
+<main class="dashboard-container">
 
-    <!-- ================= CONVERSATION PANEL ================= -->
-    <section class="card">
-        <h2>Live Caregiver–Patient Conversation</h2>
-        <p class="muted">
-            The caregiver initiates the conversation and the patient responds.
+    <!-- Conversation Panel -->
+    <section class="conversation-panel glass">
+        <h2>Live Conversation Analysis</h2>
+        <!-- <p class="panel-desc">
+            The caregiver asks a question and the patient responds.
             The system evaluates contextual understanding using classical NLP models.
-        </p>
+        </p> -->
 
-        <label for="caregiverText">Caregiver Question</label>
-        <textarea
-            id="caregiverText"
-            placeholder="Example: How are you feeling today?"
-            aria-label="Caregiver question"
-        ></textarea>
+        <label class="input-label">Caregiver Question</label>
+        <textarea id="caregiverText" placeholder="Caregiver Input"></textarea>
 
-        <label for="patientText">Patient Response</label>
-        <textarea
-            id="patientText"
-            placeholder="Example: I am feeling tired"
-            aria-label="Patient response"
-        ></textarea>
+        <label class="input-label">Patient Response</label>
+        <textarea id="patientText" placeholder="Patient Input"></textarea>
 
-        <button class="primary-btn" onclick="submitConversation()">
-            Analyze Interaction
-        </button>
+        <button class="analyze-btn glow" onclick="submitConversation()">Analyze Conversation</button>
+        <div class="explanation-box">
+            <h3>System Interpretation</h3>
+            <p id="explanationText">Awaiting analysis</p>
+        </div>
+        <!-- <div class="conversation-note">
+            Analysis is performed using smoothed and unsmoothed n‑gram language models.
+        </div> -->
     </section>
 
-    <!-- ================= EVALUATION PANEL ================= -->
-    <section class="card">
+    <!-- Comparison Panel -->
+    <section class="comparison-panel glass">
         <h2>Model Evaluation Summary</h2>
 
-        <!-- Evaluation Table -->
-        <table class="eval-table">
+        <table class="comparison-table">
             <thead>
                 <tr>
                     <th>Metric</th>
-                    <th>Unsmoothed N-Gram</th>
-                    <th>Smoothed N-Gram</th>
+                    <th>Unsmoothed n-Gram</th>
+                    <th>Smoothed n-Gram</th>
                 </tr>
             </thead>
             <tbody>
@@ -76,29 +65,20 @@
                     <td id="sContext">-</td>
                 </tr>
                 <tr>
-                    <td>Response Time (seconds)</td>
+                    <td>Response Time (s)</td>
                     <td id="uTime">-</td>
                     <td id="sTime">-</td>
                 </tr>
             </tbody>
         </table>
 
-        <!-- Chart -->
-        <canvas id="chart" height="220"></canvas>
-
-        <!-- Interpretation -->
-        <div class="interpretation">
-            <strong>System Recommendation</strong>
-            <p id="explanation">
-                Awaiting interaction for evaluation.
-            </p>
+        <div class="chart-container">
+            <canvas id="comparisonChart"></canvas>
         </div>
     </section>
 
 </main>
-
-<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="/static/js/main.js"></script>
-
 </body>
 </html>

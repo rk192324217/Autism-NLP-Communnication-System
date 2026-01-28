@@ -1,56 +1,40 @@
 import math
-from collections import defaultdict
-
+from collections import defaultdict, Counter
 
 class NGramModel:
     def __init__(self, n=2, smoothing=None):
         self.n = n
         self.smoothing = smoothing
-        self.ngram_counts = defaultdict(int)
-        self.context_counts = defaultdict(int)
+        self.counts = defaultdict(Counter)
         self.vocab = set()
 
-    def train(self, tokens):
-        if len(tokens) < self.n:
-            return
+    def train(self, corpus):
+        for sentence in corpus:
+            tokens = ["<s>"]*(self.n-1) + sentence + ["</s>"]
+            self.vocab.update(tokens)
+            for i in range(len(tokens)-self.n+1):
+                history = tuple(tokens[i:i+self.n-1])
+                word = tokens[i+self.n-1]
+                self.counts[history][word] += 1
 
-        for i in range(len(tokens) - self.n + 1):
-            context = tuple(tokens[i:i + self.n - 1])
-            target = tokens[i + self.n - 1]
+    def prob(self, history, word):
+        history_counts = self.counts[history]
+        total = sum(history_counts.values())
+        V = len(self.vocab)
 
-            self.ngram_counts[(context, target)] += 1
-            self.context_counts[context] += 1
-            self.vocab.add(target)
-
-    def probability(self, context, word):
         if self.smoothing == "laplace":
-            return (
-                self.ngram_counts[(context, word)] + 1
-            ) / (
-                self.context_counts[context] + len(self.vocab)
-            )
-
-        # Unsmoothed
-        if self.context_counts[context] == 0:
-            return 0
-
-        return self.ngram_counts[(context, word)] / self.context_counts[context]
+            return (history_counts[word] + 1) / (total + V)
+        else:
+            return history_counts[word] / total if total > 0 else 0.0
 
     def sentence_log_probability(self, tokens):
-        if len(tokens) < self.n:
-            return float("-inf")
-
+        tokens = ["<s>"]*(self.n-1) + tokens + ["</s>"]
         log_prob = 0.0
-
-        for i in range(len(tokens) - self.n + 1):
-            context = tuple(tokens[i:i + self.n - 1])
-            target = tokens[i + self.n - 1]
-
-            prob = self.probability(context, target)
-
+        for i in range(len(tokens)-self.n+1):
+            history = tuple(tokens[i:i+self.n-1])
+            word = tokens[i+self.n-1]
+            prob = self.prob(history, word)
             if prob == 0:
                 return float("-inf")
-
             log_prob += math.log(prob)
-
         return log_prob

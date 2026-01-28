@@ -1,24 +1,17 @@
 import nltk
-import string
+import re
+from nltk.tokenize import word_tokenize
 
-# Ensure tokenizer is available
 try:
     nltk.data.find("tokenizers/punkt")
 except LookupError:
     nltk.download("punkt")
 
-from nltk.tokenize import word_tokenize
-
-
-def tokenize(text):
-    """
-    Lowercase, remove punctuation, and tokenize text
-    """
-    if not text:
+def tokenize(text: str) -> list:
+    if not text or not isinstance(text, str):
         return []
-
     text = text.lower()
-    text = text.translate(str.maketrans("", "", string.punctuation))
+    text = re.sub(r"[^a-z\s]", " ", text)
     tokens = word_tokenize(text)
-
+    tokens = [t for t in tokens if len(t) > 1]
     return tokens

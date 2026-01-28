@@ -1,39 +1,42 @@
 import json
 import os
 
-USER_FILE = "data/users.json"
+USERS_FILE = "data/users.json"
 
+def ensure_users_file():
+    os.makedirs("data", exist_ok=True)
+    if not os.path.exists(USERS_FILE):
+        with open(USERS_FILE, "w") as f:
+            json.dump([], f)
 
 def load_users():
-    if not os.path.exists(USER_FILE):
-        return {}
-
-    with open(USER_FILE, "r") as f:
-        try:
+    ensure_users_file()
+    try:
+        with open(USERS_FILE, "r") as f:
             return json.load(f)
-        except json.JSONDecodeError:
-            return {}
-
+    except json.JSONDecodeError:
+        return []
 
 def save_users(users):
-    with open(USER_FILE, "w") as f:
+    with open(USERS_FILE, "w") as f:
         json.dump(users, f, indent=2)
-
 
 def register_user(username, password, role):
     users = load_users()
-
-    if username in users:
-        return False
-
-    users[username] = {
+    for user in users:
+        if user["username"] == username:
+            return False
+    users.append({
+        "username": username,
         "password": password,
         "role": role
-    }
+    })
     save_users(users)
     return True
 
-
 def authenticate_user(username, password):
     users = load_users()
-    return username in users and users[username]["password"] == password
+    for user in users:
+        if user["username"] == username and user["password"] == password:
+            return user  # return full user dict instead of True
+    return None

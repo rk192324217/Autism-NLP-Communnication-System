@@ -4,40 +4,24 @@
     <meta charset="UTF-8">
     <title>Autism Communication Support System | Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body class="auth-body">
 
 <div class="auth-wrapper">
-    <div class="auth-card">
+    <div class="auth-card glass">
 
-        <h1 class="auth-title">Welcome</h1>
-        <p class="auth-subtitle">
-            Autism Communication Support System
-        </p>
+        <h1 class="auth-title">Autism Communication Support</h1>
+        <p class="auth-subtitle">Secure access for caregivers and patients</p>
 
         {% if error %}
-        <div class="error-box">
-            {{ error }}
-        </div>
+            <div class="error-box">{{ error }}</div>
         {% endif %}
 
         <form class="auth-form" method="POST">
-
-            <input
-                type="text"
-                name="username"
-                placeholder="Username"
-                required
-                autocomplete="off"
-            >
-
-            <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                required
-            >
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
 
             <select name="role" required>
                 <option value="">Select role</option>
@@ -45,23 +29,15 @@
                 <option value="patient">Patient</option>
             </select>
 
-            <!-- Action selector -->
             <div class="auth-actions">
-                <button type="submit" name="action" value="login">
-                    Login
-                </button>
-
-                <button type="submit" name="action" value="register" class="secondary">
-                    Register
-                </button>
+                <button type="submit" name="action" value="login">Login</button>
+                <button type="submit" name="action" value="register" class="secondary">Register</button>
             </div>
-
         </form>
 
-        <div class="auth-footer">
-            Designed for assistive communication
-        </div>
-
+        <!-- <div class="auth-footer">
+            Autism communication support
+        </div> -->
     </div>
 </div>
 
